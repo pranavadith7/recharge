@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/all.css" type="text/css" />
+<style>
+   .split-left a:link {
+     text-decoration: none;
+    }
+    .split-left a:hover {
+      text-decoration: underline;
+      color: red;
+      font-size: 19.9px;
+      font-style: italic;
+    }
+
+    .split-right a:link {
+     text-decoration: none;
+    }
+    .split-right a:hover {
+      text-decoration: underline;
+      color: red;
+      font-size: 19.9px;
+      font-style: italic;
+    }
+
+body {
+  font-family: Arial;
+  color: white;
+}
+
+/* .split {
+  height: 100%;
+  width: 23%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+.right {
+  right: 30%;
+  background-color: white;
+} */
+
+/* .centered {
+  position: absolute;
+  top: 10%;
+  right:0%;
+  transform: translate(0%, 0%);
+  text-align: center;
+}
+
+.centered1 {
+  position: inherit;
+  top: 0%;
+  left: 24%;
+  right:0%;
+  transform: translate(0%, 0%);
+  text-align: center;
+}  */
+
+/* new */
+
+.container {
+    margin-left: 300px;
+    font-family: sans-serif;
+    /* background-color: lightblue; */
+    height: 800px;
+    /* padding: 10px 10px; */
+    /* position: relativse; */
+}
+
+.split-left {
+  position: fixed;
+  /* left: 0; */
+  background-color: rgba(5, 112, 252, 0.822);
+  height: 100%;
+  width: 300px;
+  padding-bottom: 20%;
+  text-indent: 10px;
+}
+
+.split-right {
+  /* background-color: lightblue; */
+  margin-left: 300px;
+  padding: 2px 4px;
+  width: 74.79%;
+}
+
+</style>
+</head>
+<body>
+  <div class="top-bar">
+		<div class="top-button">
+			<ul>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="register.html">Register</a></li>
+			</ul>
+		</div>
+		<div class="heading">G-Tel Recharge</div>
+	</div>
+
+	<div class="side-bar">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="mobile.html">Mobile</a></li>
+      <li><a href="land.html">Landline</a></li>
+      <li> <a href="dth.html">DTH</a></li>
+			<li><a href="plans.html">Plans</a></li>
+      <li class="active"><a href="payment.html">Payment</a></li>
+		</ul>
+  </div>
+  
+
+<div class="container">
+<div class="split-left">
+  <div class="centered">
+    <p style="color: rgb(251, 0, 0);font-size: 40px;">Choose method of Payment</p><br><br>
+    <a href=credit.html><h2 style="color: white;">Credit Card</h2></a><hr><br>
+    <a href=debit.html><h2 style="color: white;">Debit Card</h2></a><hr><br>
+    <a href=paytm.html><h2 style="color: white;">Paytm</h2></a><hr><br>
+    <a href="netbanking.html"><h2 style="color: white;">Internet Banking</h2></a><hr><br>
+  </div>
+</div>
+
+
+<div class="split-right">
+  <div class="centered1">
+    <h1 style="color: red;font-size: 50px;text-align: center;">PAYMENT GATEWAY</h1><br>
+    <p style="color: black;font-size: 20px;">A payment gateway is a merchant service provided by an e-commerce application service provider that authorizes credit card or direct payments processing for e-businesses, online retailers, bricks and clicks, 
+      or traditional brick and mortar. The payment gateway may be provided by a bank to its customers, but can be provided by a specialised financial service provider as a separate service, such as a payment service provider.
+      A payment gateway facilitates a payment transaction by the transfer of information between a payment portal (such as a website, mobile phone or interactive voice response service) and the front end processor or acquiring bank.</p>
+      <br>
+      <br>
+      <br>
+      <h2 style="color: blue;font-size: 35px;"><pre> <u>NOTE:</u>   </pre></h2><br>
+      <ul style="list-style-type: none;">
+    <monospace><li style="color: black;font-size: 27px;">Incase of cancelled payment, money will be refunded within 2-3 working days.            </li>
+    <li style="color: black;font-size: 27px;">For further clarification, contact us via <b>services@gtel.org                 </b></li></monospace>
+  </ul><br>
+  <br><center>
+  <img src="images/html images/visa.jpeg" style="width:500px;height:150px;">
+  <img src="images/html images/paytm1.jpg" style="width:150px;height:150px;"></center>
+  </div>
+</div>
+  </div>   
+</body>
+</html> 

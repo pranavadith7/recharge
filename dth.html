@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recharge</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/all.css" type="text/css" />
+	<style>
+		.container {
+			/* background-color: aqua; */
+			/* max-width: 500px; */
+			/* height: 600px; */
+			margin-left: 300px;
+		}
+		.container .forms {
+			/*background-color: bisque; */
+			padding: 20px;
+			font-family: Source Sans Pro, sans-serif;
+			width: 40%;
+			float: left;
+		}
+		.forms input[type=text], .forms input[type=submit], .forms input[type=button], select {
+			width: 100%;
+			display: inline-block;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			margin-top: 20px;
+			box-sizing: border-box;
+			border: 2px solid orangered;
+		}
+		.forms input[type=text]:focus {
+			border: 2px solid blue;
+		}
+		.forms select:focus {
+			border: 2px solid orangered;
+		}
+		.container input[type=submit], .container input[type=button] {
+			background-color: orangered;
+			color: white;
+			border: 3px solid rgb(0, 150, 255);
+		}
+		.container input[type=submit]:hover, .container input[type=button]:hover {
+			background-color: white;
+			color: black;
+		}
+		.b-img {
+			background-color: bisque;
+			height: 333px;
+			width: 40%;
+			float: right;
+			margin-right: 100px;
+			background-image: url('./images/dth.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		.container .para {
+			/* background-color: aqua; */
+			clear: left;
+			padding: 35px 10px;
+			font-family: Source Sans Pro, sans-serif;
+			line-height: 2;
+		}
+		.container .para h1 {
+			color: orangered;
+		}
+	</style>
+</head>
+<body>
+	<div class="top-bar">
+		<div class="top-button">
+			<ul>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="register.html">Register</a></li>
+			</ul>
+		</div>
+		<div class="heading">G-Tel Recharge</div>
+	</div>
+
+	<div class="side-bar">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="mobile.html">Mobile</a></li>
+			<li><a href="land.html">Landline</a></li>
+			<li class="active"> <a href="dth.html">DTH</a></li>
+			<li><a href="plans.html">Plans</a></li>
+            <li><a href="payment.html">Payment</a></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<div class="forms">
+			<!-- <form method="GET" action="payment.html"> -->
+			<form method="GET">
+				<h2 style="color: orangered;">PAY YOUR DTH BILL</h2>
+				<p>Just give few details</p>
+				<select id="sele">
+					<option value="" selected disabled>DTH Provider</option>
+					<option value="Airtel">Airtel DTH</option>
+					<option value="Dish TV">Dish TV</option>
+					<option value="Sun Direct TV">Sun Direct TV</option>
+					<option value="Tata Sky">Tata Sky</option>
+					<option value="d2h">d2h</option>
+				</select>
+				<input type="text" id="cid" name="telNo" placeholder="Customer ID">
+				<input type="text" id="amo" name="amount" placeholder="Amount" class="send" id="val">
+				<!-- <input type="submit" name="sub" value="Submit"> -->
+				<input type="button" name="sub" value="Submit" onclick="subFun();">
+			</form>
+		</div>
+		<div class="b-img"></div>
+		<div class="para">
+			<h1>Online DTH Recharge - Enjoy Seamless TV Experience!</h1>
+			<p>
+				Your DTH recharge cannot get simpler than this! FreeCharge is one of the most trusted website that has around 27 million users.				
+				With the emergence of DTH TV, there is a need to recharge DTH services in order to enjoy a seamless TV experience. 
+				But chances are you might forget to recharge on time resulting in a disrupted DTH service. Not anymore! Online 
+				DTH recharge is here to rescue you. You can now do DTH recharge online through FreeCharge. You no longer need to rely 
+				on shops to get information on the latest channel packs and to recharge your DTH service.
+			</p>
+		</div>
+	</div>
+
+	<script>
+		function subFun() {
+			var cusId = document.getElementById("cid");
+			var amId = document.getElementById("amo");
+			var sel = document.getElementById("sele");
+			var cusNo = cusId.value;
+			var amount = amId.value;
+			var selectedVal = sel.value;
+			cusNo = cusNo.trim();
+			amount = amount.trim();
+			// console.log(cusNo);
+			// console.log(amount);
+			// console.log(selectedVal);
+			if(selectedVal === "") {
+				alert("Select a DTH provider");
+			}
+			else if(cusNo == "" || cusNo == " " || amount == " " || amount == "") {
+				console.log("Empty");
+				alert("All the fields should be filled");
+			} else if(isNaN(amount)) {
+				alert("Enter a valid amount");
+			} else {
+				window.location.href = "payment.html";
+			}
+		}
+	</script>
+</body>
+</html>

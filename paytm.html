@@ -1,0 +1,80 @@
+<html>
+    
+        <h1 style="text-align: center;">Paytm</h1><br><br>
+<style>
+    table,th,td{border: solid red;border-radius: 20px;border-style:solid ;border-width: 11px;}
+</style>
+
+  <body>
+  <img src="html images/paytm_background.png" align=left height="450" width="510">
+  <img src="html images/promo.jpg" align=right height="450" width="510"> 
+   
+  <center>
+<table>
+    <tr>
+        <td>
+            <form>
+            <label style="font-size: 25px;color: red;"><b>Mobile Number</b></label><br>
+                <input type="text" name="number" style="height: 35px; width: 193px;"><br><br>
+                <label style="font-size: 25px;color: red;"><b>UPI Pin</b></label><br>
+                <input type="password" id="upipin" name="upipin" style="height: 35px; width: 193px;"><br>
+                <input type="checkbox" onclick="myFunction()">
+                <label style="font-size: 20px;color: red;"><b>Show UPI Pin</b></label><br><br>
+                <label style="font-size: 25px;color: red;"><b>Refferal Code</b></label><br>
+                <input type="text" name="code" id="code" style="height: 35px; width: 193px;"><br><br>
+                <input type="button" onclick="fun(this.form)" value="Check Validity" style="border-width: 2px;">
+                <center>
+                <br><input type="button" onclick="check(this.form)" value="Proceed" style="border-width: 8px; width: 100px; height: 35px;">
+                </center>
+
+
+<script>
+    function myFunction() {
+       var x = document.getElementById("upipin");
+           if (x.type === "password") {
+           x.type = "text";
+           } else {
+           x.type = "password";
+     }
+      }
+      </script>
+
+<script lang="javascript">
+    function fun(form)
+        {
+     if(form.code.value=="123456")
+       {
+          alert("Refferal Code applied")
+        }
+          else
+        {
+          alert("Refferal Code is incorrect")
+            }
+       }
+           </script>
+       
+</form>
+      </td>
+         </tr>
+      </table>
+      <script lang="javascript">
+       function check(form)
+           {
+        if(form.upipin.value=="123456")
+          {
+             window.location.replace("succ.html")
+           }
+             else if(form.upipin.value=="")
+             {
+               alert("Please enter a valid 6-digit UPI Pin")
+             }
+             else
+           {
+             alert("UPI Pin is incorrect")
+               }
+          }
+              </script>
+             </center>
+         </body>
+      </head>
+    </html>

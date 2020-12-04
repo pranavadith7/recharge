@@ -1,0 +1,89 @@
+<html>
+<style>
+    table,th,td{border: solid red;border-radius: 20px;border-style:solid ;border-width: 11px;}
+    .content {
+        /*background-color: lightblue;*/
+        margin-left: 300px;
+        padding: 2px 16px;
+    }
+
+    .content h1 {
+        margin-top: 20px;
+        text-align: center;
+        /*margin: auto;*/
+    }
+
+    .content table {
+        margin-left: 370px;
+        margin-top: 50px;
+    }
+</style>
+<link rel="stylesheet" href="css/all.css" type="text/css" />
+
+<body>
+
+    <div class="top-bar">
+        <div class="top-button">
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+        <div class="heading">G-Tel Recharge</div>
+    </div>
+
+    <div class="side-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+            <li><a href="land.html">Landline</a></li>
+            <li> <a href="dth.html">DTH</a></li>
+            <li><a href="plans.html">Plans</a></li>
+            <li class="active"><a href="payment.html">Payment</a></li>
+        </ul>
+    </div>
+
+<div class="content">
+    <!-- <center> -->
+        <h1>Debit Card</h1>
+<table >
+    <tr>
+        <td>
+       
+    <form action="succ.html">
+        <label for="bank" style="font-size: 25px;color: blue;">Select your Bank:</label><br>
+  <select id="bank" name="bank" style="height: 35px;font-size: 18px;">
+    <option value="Axis Bank" style="font-size: 18px;color: red;">Axis Bank</option>
+    <option value="Bank of Baroda" style="font-size: 18px;color: red;">Bank of Baroda</option>
+    <option value="Canara Bank" style="font-size: 18px;color: red;">Canara Bank</option>
+    <option value="Dhanlaxmi Bank" style="font-size: 18px;color: red;">Dhanlaxmi Bank</option>
+    <option value="Federal Bank" style="font-size: 18px;color: red;">Federal Bank</option>
+    <option value="ICICI Bank" style="font-size: 18px;color: red;">ICICI Bank</option>
+    <option value="HDFC Bank" style="font-size: 18px;color: red;">HDFC Bank</option>
+    <option value="Karur Vysya Bank" style="font-size: 18px;color: red;">Karur Vysya Bank</option>
+    <option value="Punjab National Bank" style="font-size: 18px;color: red;">Punjab National Bank</option>
+    <option value="State Bank of India" style="font-size: 18px;color: red;">State Bank of India</option>
+    <option value="Union Bank of India" style="font-size: 18px;color: red;">Union Bank of India</option>
+    <option value="Vijaya Bank" style="font-size: 18px;color: red;">Vijaya Bank</option>
+  </select>
+    <br><br>
+
+    <label style="font-size: 25px;color: blue;">Card Number:</label><br>
+    <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" name="Card Number" style="height: 35px;width: 193px;text-align: center;"><br><br>
+
+    <label style="font-size:25px ;color: blue;">Card Name:</label><br>
+    <input type="text" placeholder="Name as per card" name="Card Number" style="height: 35px;width: 193px;text-align: center;"><br><br>
+
+    <label style="font-size:25px ;color: blue;">Valid Thru:  </label>  <label style="font-size:25px ;color: blue;"> CVV:</label><br>
+    <input type="text" placeholder="mm/yyyy" name="Valid Thru" style="height: 35px;width: 120px;text-align: center;">  <input type="password" placeholder="***" name="CVV" style="height: 35px;width: 73px;text-align: center;"><br><br>
+    <center>
+    <input type="submit" value="SUBMIT"  style="border-width: 8px;text-align: center;"><br></center>
+
+</form>
+</td>
+</tr>
+</table>
+    <!-- </center> -->
+</div>
+    </body>
+</html>

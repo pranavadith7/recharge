@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recharge</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/all.css" type="text/css" />
+    <link rel="stylesheet" href="css/mob.css" type="text/css" />
+</head>
+<body>
+	<div class="top-bar">
+		<div class="top-button">
+			<ul>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="register.html">Register</a></li>
+			</ul>
+		</div>
+		<div class="heading">G-Tel Recharge</div>
+	</div>
+
+	<div class="side-bar">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li class="active"><a href="mobile.html">Mobile</a></li>
+            <li><a href="land.html">Landline</a></li>
+            <li> <a href="dth.html">DTH</a></li>
+            <li><a href="plans.html">Plans</a></li>
+            <li><a href="payment.html">Payment</a></li>
+		</ul>
+    </div>
+
+    <div class="container">
+        <div class="forms">
+            <form method="GET" action="payment.html">
+                <h2>RECHARGE YOUR MOBILE</h1>
+                <label for="pnNo">Tell us your number</label>
+                <input type="tel" id="pnNo" name="phoneNo" placeholder="123-4567-890" />
+                <br><br>
+                <input type="radio" id="prep" name="paymentType" value="prepaid" />
+                <label for="prep">Prepaid</label>
+                <input type="radio" id="post" name="paymentType" value="postpaid" />
+                <label for="post">Postpaid</label>
+                <!-- <br> -->
+                <!-- <label for="rup">Amount</label> -->
+                <input type="text" name="amount" id="rup" placeholder="Amount" class="send" id="val" />
+                <div class="sub">
+                    <input type="submit" value="Submit" />
+                </div>
+
+            </form>
+        </div>
+        
+
+        <div class="offers">
+            
+        </div>
+    </div>
+    <script type="text/javascript" src="scripts/succe.js"></script>
+</body>
+</html>

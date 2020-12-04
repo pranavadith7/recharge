@@ -1,0 +1,70 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/*background-color: #11111111;*/
+	background-image: url(../images/electronics.jpg);
+	font-family: sans-serif;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 480px;
+}
+
+.container .top-bar {
+	background-color: orangered;
+	color: white;
+	padding: 15px;
+}
+
+.container .top-bar h1 {
+	text-align: center;
+}
+
+.form-content {
+	padding-top: 20px;
+	padding-right: 100px;
+	padding-left: 100px;
+	height: 500px;
+	width: 500px;
+	margin: auto;
+	margin-top: 90px;
+}
+
+.form-content {
+	background-color: rgba(255,255,255,0.75);
+}
+
+input[type=text], input[type=email], input[type=password] {
+	display: block;
+	box-sizing: border-box;
+	padding: 10px 25px;
+	border: 2px solid black;
+	border-radius: 20px;
+	margin-bottom: 20px;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+	border: 4px solid #0087e0;
+}
+
+button {
+	background-color: #0087e0;
+	border: 2px solid black;
+	color: white;
+	padding: 10px 40px;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+
+button:hover {
+	background-color: orangered;
+	color: white;
+}
+
+.forms {
+	/*background-color: red;*/
+}

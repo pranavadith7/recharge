@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Profile</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: arial;
+			background-color: white;
+		}
+		.tab {
+			overflow: hidden;
+			border: 1px solid #ccc;
+			background-color: #f1f1f1;
+		}
+		.tab button {
+			background-color: inherit;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			transition: 0.3s;
+			font-size: 17px;
+			color: white;
+		}
+		.tab button:hover {
+			background-color: rgb(200, 50, 50);
+			color: white;
+		}
+		.tab button.active {
+			background-color: white;
+			color: black;
+			border: 1px solid white;
+		}
+		.tabcontent {
+			display: none;
+			padding: 6px 12px;
+			border: 1px solid #ccc;
+			border-top: none;
+		}
+		#edit p button {
+			background-color: rgb(0, 150, 200);
+			border: 3px solid orangered;
+			border-radius: 3px;
+			padding: 10px 18px;
+			font-size: 17px;
+			color: white;
+		}
+		#edit p button:hover {
+			/*background-color: white;*/
+			background-color: rgba(0, 150, 200, 0.8);
+			color: black;
+			border: 3px solid orangered;
+		}
+		input[type=button] {
+			background-color: rgb(0, 150, 200);
+			border: 3px solid orangered;
+			border-radius: 3px;
+			padding: 8.5px 20px;
+			font-size: 17px;
+			color: white;
+		}
+		input[type=button]:hover {
+			background-color: rgba(0, 150, 200, 0.8);
+			color: black;
+			border: 3px solid orangered;
+		}
+		input[type=text] {
+			padding: 10px 18px;
+			border: 3px solid orangered;
+		}
+		input[type=text]:focus {
+			padding: 10px 18px;
+			border: 3px solid rgb(0, 150, 200);
+		}
+		.tab a {
+			text-decoration: none;
+			color: white;
+			border: 3px solid white;
+			padding: 6px 16px;
+			margin-right: 0px;
+			border-radius: 3px;
+			float: right;
+			position: relative;
+			margin-top: 8px;
+			margin-right: 20px;
+			background-color: rgb(255, 59, 21);
+		}
+		.tab a:hover {
+			background-color: white;
+			color: black;
+			border: 3px solid green;
+		}
+	</style>
+</head>
+<body>
+	<div class="tab" style="background-color: orangered; color: white;">
+		<button id="gen" class="tablinks active" onclick="openCity(event, 'general')"> General </button>
+		<button id= "trans" class="tablinks" onclick="openCity(event, 'transactions')"> Transactions</button>
+		<button id="edi" class="tablinks" onclick="openCity(event, 'edit')"> Edit Profile </button>
+		<a href="index.html">Home</a>
+	</div>
+
+
+	<div class="content">
+		<div id="general" class="tabcontent" style="display: block;">
+			<h1 style="color: blue;"> User Profile </h1>
+			<h2 style="color: red; text-align: center;">Hello <span id="newText"></span> </h2>
+			<h2 style="color: red; text-align: center;"> <span id="newNumber"></span> </h2>
+		</div>
+
+		<div id="transactions" class="tabcontent">
+		<h3>Transactions</h3><br>
+		<p>View your past transactions here.</p>
+		</div>
+
+		<div id="edit" class="tabcontent">
+			<h3>Edit Profile</h3>
+			<!-- <p>Change Profile Picture</p> -->
+			<p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;"></p>
+			<p> <button><label for="file" style="cursor: pointer;">Change Picture</label> </button></p>
+			<br><br>
+
+			<p>Edit Your Name</p>
+			<input type='text' id='theInput'> <input type='button' onclick='changeName()' value='Change'>
+			<br><br>
+
+			<p>Change Password</p>
+			<!-- <input type="text" > -->
+			<br><br>
+
+			<p>Change Mobile Number</p>
+			<input type="text" id="number">
+			<input type="button" onclick="changeNumber()" value="Change">
+		</div>
+		<br><br>
+		<center>
+			<img src="html images/avatar.png" id="output" heigth="150" width="150">
+			<br><br><br>
+
+			<img src="html images/qr.png" height="200" width="200">
+		</center>
+	</div>
+
+	
+
+	
+
+	<script type="text/javascript">
+		var loadFile = function(event) {
+			var image = document.getElementById('output');
+			image.src = URL.createObjectURL(event.target.files[0]);
+		};
+
+		function changeName() {
+			var formInput = document.getElementById('theInput').value;
+			document.getElementById('newText').innerHTML = formInput;
+		}
+		function changeNumber() {
+			var formInput = document.getElementById('number').value;
+			document.getElementById('newNumber').innerHTML = formInput;
+		}
+
+		function openCity(evt, cityName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for(i=0; i<tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for(i=0; i<tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+	
+			evt.currentTarget.className += " active";
+	
+		}
+	</script>
+</body>
+</html>

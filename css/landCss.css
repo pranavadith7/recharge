@@ -1,0 +1,71 @@
+.content {
+	margin-left: 300px;
+	/*background-color: lightblue;*/
+	padding: 10px 10px;
+	position: fixed;
+	width: 79.2%;
+}
+
+.content .forms {
+    /*background-color: bisque; */
+    padding: 20px;
+    font-family: Source Sans Pro, sans-serif;
+    width: 40%;
+    float: left;
+}
+
+.forms input[type=text], .forms input[type=submit], .forms input[type=text], select {
+    width: 100%;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: 2px solid orangered;
+}
+
+.forms input[type=text]:focus {
+    border: 2px solid blue;
+}
+
+.forms select:focus {
+	border: 2px solid orangered;
+}
+
+.content input[type=submit] {
+	background-color: orangered;
+    color: white;
+    border: 3px solid rgb(0, 150, 255);
+}
+
+.content input[type=submit]:hover {
+	background-color: white;
+    color: black;
+}
+
+.b-img {
+	background-color: bisque;
+	height: 333px;
+	width: 40%;
+	float: right;
+	margin-right: 100px;
+	background-image: url('../images/landline.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.bot {
+	width: 100%;
+	height: 288px;
+	/*background-color: red;*/
+	float: left;
+	overflow: auto;
+	font-family: sans-serif;
+	line-height: 1.6;
+}
+
+.bot h2 {
+	color: orangered;
+}

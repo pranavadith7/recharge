@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>
+            Net banking
+        </title>
+        <link rel="stylesheet" href="css/all.css" type="text/css" />
+        </head>
+        <style>
+            table,th,td {
+              border:  gold;
+              border-radius: 20px;
+              border-style:solid;
+              border-width: 11px;
+            }
+
+/*            .back-img {
+              background-image: url('online_banking.jpg');
+              background-size: 134% 200%;"
+            }
+*/
+            .content { 
+                /*background-color: lightblue;*/
+                background-image: url('html images/online_banking.jpg');
+                /*background-size: 134% 200%;*/
+                /*background-position: center;*/
+                background-size: cover;
+                margin-left: 300px;
+                padding: 2px 3px;
+                padding-bottom: 9.1%;
+                /*opacity: 0.7;*/
+              }
+
+              .tabl:before {
+                /*opacity: 0.1;*/
+              }
+
+            /*.main-content {
+                background-color: lightblue;
+                padding: 9% 35%;
+              }
+*/
+        </style>
+        <body >
+          <div class="top-bar">
+    <div class="top-button">
+      <ul>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </div>
+    <div class="heading">G-Tel Recharge</div>
+  </div>
+
+  <div class="side-bar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="mobile.html">Mobile</a></li>
+      <li><a href="land.html">Landline</a></li>
+      <li> <a href="dth.html">DTH</a></li>
+      <li><a href="plans.html">Plans</a></li>
+      <li class="active"><a href="payment.html">Payment</a></li>
+    </ul>
+  </div>
+            <div class="content">
+            <center>
+            <h1 style="color: rgb(255, 100, 10); text-shadow: 2.5px 1px 1px black;font-size: 40px; margin-left: 200px;" >Internet Banking</h1><br><br><br><br><br><br>
+            <table class = "tabl" style="background-color: rgba(0, 0, 0, 0.9);">
+                <tr>
+                    <td>
+            <form>
+                <label for="bank" style="font-size: 25px;color: red;"><b>Select your Bank</b></label><br>
+                <select id="bank" name="bank" style="height: 35px;font-size: 18px;">
+                  <option value="Axis Bank" style="font-size: 18px;color: red;">Axis Bank</option>
+                  <option value="Bank of Baroda" style="font-size: 18px;color: red;">Bank of Baroda</option>
+                  <option value="Canara Bank" style="font-size: 18px;color: red;">Canara Bank</option>
+                  <option value="Dhanlaxmi Bank" style="font-size: 18px;color: red;">Dhanlaxmi Bank</option>
+                  <option value="Federal Bank" style="font-size: 18px;color: red;">Federal Bank</option>
+                  <option value="ICICI Bank" style="font-size: 18px;color: red;">ICICI Bank</option>
+                  <option value="HDFC Bank" style="font-size: 18px;color: red;">HDFC Bank</option>
+                  <option value="Karur Vysya Bank" style="font-size: 18px;color: red;">Karur Vysya Bank</option>
+                  <option value="Punjab National Bank" style="font-size: 18px;color: red;">Punjab National Bank</option>
+                  <option value="State Bank of India" style="font-size: 18px;color: red;">State Bank of India</option>
+                  <option value="Union Bank of India" style="font-size: 18px;color: red;">Union Bank of India</option>
+                  <option value="Vijaya Bank" style="font-size: 18px;color: red;">Vijaya Bank</option>
+                </select>
+                  <br><br>
+                <label style="font-size: 25px;color: red;"><b>*Username</b></label><br>
+                <input type="text" name="username" style="height: 35px; width: 193px;"><br><br>
+                <label style="font-size: 25px;color: red;"><b>*Password</b></label><br>
+                <input type="password" id="password" name="password" style="height: 35px; width: 193px;"><br><br>
+                <input type="checkbox" onclick="myFunction()">
+                <label style="font-size: 20px;color: red;"><b>Show Password</b></label>
+                <center>
+                  <br>
+                  <input type="button" onclick="check(this.form)" value="Login" style="border-width: 8px; width: 100px; height: 35px;">
+                </center>
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+            </form>
+        </td>
+    </tr>
+    </table>
+            <script lang="javascript">
+                function check(form)
+                {
+                    if(form.username.value=="admin" && form.password.value=="admin")
+                    {
+                        window.location.replace("succ.html");
+                        return;
+                    }
+                    else
+                    {
+                        alert("Username or Password is incorrect");
+                    }
+                }
+            </script>
+            </center>
+          </div>
+        </body>
+    </head>
+</html>

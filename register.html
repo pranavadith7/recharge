@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<script type="text/javascript" src="js/reg.js"></script>
+	<script lang="javascript">
+		function check(form) {
+			if((form.pass.value == form.conpass.value) && form.pass.value !="") {
+				window.location.href = "regsuccess.html";
+				return false;
+			}
+			else {
+				alert("Sorry, Passwords do not match");
+			}
+		}
+
+		function showPass() {
+			var x = document.getElementById("password");
+			var y = document.getElementById("con_pass");
+			if (x.type == "password" && y.type == "password") {
+				x.type = "text";
+				y.type = "text";
+			} else {
+				x.type = "password";
+				y.type = "password";
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="top-bar">
+			<h1>Register with G-Tel</h1>
+		</div>
+
+		<div class="form-content">
+			<div class="forms">
+				<center>
+				<form action="" method="">
+					<label for="email_id">Email-Id<span style="color: red; font-size: 25px;">*</span></label>
+					<input type="email" name="email" id="email_id" placeholder="someone@mail.com">
+
+					<label for="password">Password<span style="color: red; font-size: 25px;">*</span></label>
+					<input type="password" name="pass" id="password" placeholder="********">
+
+					<label for="con_pass">Confirm password<span style="color: red; font-size: 25px;">*</span></label>
+					<input type="password" name="conpass" id="con_pass" placeholder="********">
+
+					<input type="checkbox" name="showpass" onclick="showPass()">
+					<label for="showpass">Show Password<span style="color: red; font-size: 25px;">*</span></label>
+
+					<br><br>
+					<label for="mobile_number">Mobile Number<span style="color: red; font-size: 25px;">*</span></label>
+					<input type="text" name="num" id="mobile_number" placeholder="123-4567-890">
+
+					<button onclick="return check(this.form)">Register</button>
+				</form>
+			</center>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+.container {
+    margin-left: 300px;
+    font-family: sans-serif;
+    /* background-color: lightblue; */
+    padding: 10px 10px;
+    position: relative;
+}
+
+.container .forms {
+    /* background-color: bisque; */
+    padding: 20px;
+    font-family: Source Sans Pro, sans-serif;
+    width: 30%;
+}
+
+.forms input[type=tel], .forms input[type=number], .forms input[type=text] {
+    width: 100%;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: 2px solid orangered;
+}
+
+.forms input[type=tel]:focus, .forms input[type=number]:focus {
+    border: 2px solid blue;
+}
+
+.container .sub {
+    height: 50px;
+    width: 200px;
+    float: right;
+    /* background-color: bisque; */
+    margin-top: -59px;
+    margin-right: -370px;
+}
+
+.container input[type=submit] {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: orangered;
+    color: white;
+    border: 3px solid rgb(0, 150, 255);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.offers {
+    height: 300px;
+    width: 90%;
+    background-image: url("../images/rech.png");
+    padding: 50px;
+    /* background-color: aqua; */
+    background-position: center;
+    background-size: cover;
+}
+
+.container input[type=submit]:hover {
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,116 @@
+.what {
+    /* background-color: lightblue; */
+    font-family: cursive;
+    color: orangered;
+    padding: 25px;
+}
+
+.container {
+    /* background-color: lightblue; */
+    margin-left: 300px;
+    padding: 2px 16px;
+}
+
+.services {
+    /* background-color: lightblue; */
+    padding: 20px 0px;
+    color: black;
+    font-family: sans-serif;
+}
+
+/* .services .lis1, .lis2, .lis3 {
+     float: left; 
+    padding: 10px 2px;
+} */
+
+.services {
+    /* background-color: aqua; */
+    height: 100px;
+}
+
+.services .lis1 {
+    /* background-color: lightblue; */
+    width: 33%;
+    float: left;
+}
+
+.services .lis2 {
+    /* background-color: lightcoral; */
+    width: 33%;
+    float: left;
+}
+
+.services .lis3 {
+    /* background-color: lawngreen; */
+    width: 34%;
+    float: left;
+}
+
+.services .lis1 img {
+    float: left;
+    height: 70px;
+}
+
+.services .lis2 img {
+    float: left;
+    height: 70px;
+}
+
+.services .lis3 img {
+    float: left;
+    height: 70px;
+}
+
+.services .lis1 p {
+    margin-top: 10px;
+}
+
+.services .lis2 p {
+    margin-top: 10px;
+}
+
+.services .lis3 p {
+    margin-top: 10px;
+}
+
+.accImg img {
+    float: left;
+    height: 130px;
+    width: 130px;
+    margin-left: 0px;
+    padding-left: 50px;
+    overflow-x: hidden;
+}
+
+.accImg h2 {
+    font-family: cursive;
+    color: orangered;
+    padding-left: 27px;
+}
+
+.mobRe {
+    float: left;
+    /* background-color: lightblue; */
+    padding: 20px 25px;
+    font-family: sans-serif;
+    padding-bottom: 50px;
+}
+
+.mobRe h2 {
+    color: orangered;
+    font-family: cursive;
+}
+
+.mobRe p {
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.foo {
+    float: left;
+    background-color: orangered;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: cursive;
+}
