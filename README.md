@@ -1,2 +1,2 @@
 # recharge
-https://algorithm-unlocks.herokuapp.com/
+https://pranavadith7.github.io/recharge/
